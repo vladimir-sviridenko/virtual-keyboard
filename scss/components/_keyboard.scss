@@ -1,0 +1,45 @@
+.keyboard {
+  box-sizing: border-box;
+  padding: 2px;
+
+  background-color: $keyboard-bg-color;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+.keyboard__row {
+  display: flex;
+}
+
+.keyboard__key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $key-size;
+  height: $key-size;
+  margin: 4px 3px;
+
+  color: $letter-primary-color;
+
+  background-color: $key-primary-color;
+  border-radius: 3px;
+
+  transition: border-radius 0.3s, background-color 0.3s;
+
+  user-select: none;
+
+  &_active {
+    background-color: $key-active-color;
+    border-radius: 50px;
+  }
+}
+
+.Tab,
+.Backspace,
+.CapsLock,
+.Enter,
+.ShiftLeft,
+.ShiftRight,
+.Space {
+  flex-grow: 1;
+}
